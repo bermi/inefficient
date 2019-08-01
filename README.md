@@ -25,7 +25,7 @@ Using a connect-compatible framework such as Express.js conditionally enable
 the following middleware
 
     if (process.env.DANGEROUSLY_INEFICCIENT_ENDPOINT) {
-      app.get(`/${process.envDANGEROUSLY_INEFICCIENT_ENDPOINT}`, require('inefficient'));
+      app.get(`/${process.env.DANGEROUSLY_INEFICCIENT_ENDPOINT}`, require('inefficient'));
     }
 
 The using a tool like siege
