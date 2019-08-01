@@ -1,0 +1,24 @@
+{
+  "name": "inefficient",
+  "version": "1.0.0",
+  "description": "Stress generation middleware to load CPU and memory.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bermi/inefficient.git"
+  },
+  "keywords": [
+    "memory leak",
+    "load testing",
+    "autoscaling",
+    "kubernetes",
+    "hpa",
+    "stress testing"
+  ],
+  "author": "Bermi Ferrer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bermi/inefficient/issues"
+  },
+  "homepage": "https://github.com/bermi/inefficient#readme"
+}
