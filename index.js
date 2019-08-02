@@ -51,9 +51,10 @@ module.exports = (req, res) => {
     JSON.parse(JSON.stringify(global._memoryLeaker.slice(0, +cpu)));
   }
 
-  res.send({
+  res.writeHead(200, {'Content-Type': 'application/json'});
+  res.end(JSON.stringify({
     currentMemory,
     totalMemory: Math.ceil(totalmem() / 1024 / 1024),
     freeMemory: Math.ceil(freemem() / 1024 / 1024),
-  });
+  }));
 };

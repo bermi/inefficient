@@ -3,6 +3,11 @@
   "version": "1.1.0",
   "description": "Stress generation middleware to load CPU and memory.",
   "main": "index.js",
+  "scripts": {
+    "docker-build": "docker build -t bermi/inefficient:latest . && docker tag bermi/inefficient:latest bermi/inefficient:`node -e \"console.log(require('./package.json').version)\"`",
+    "docker-publish": "docker push bermi/inefficient:`node -e \"console.log(require('./package.json').version)\"`",
+    "docker-run": "docker run --rm -it -p 3000:3000 bermi/inefficient:latest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bermi/inefficient.git"

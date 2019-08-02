@@ -21,6 +21,8 @@ Choose a hard to guess unique endpoint for the stress test:
     export DANGEROUSLY_INEFICCIENT_ENDPOINT=_aNonGuessableInefficientEndpoint
 
 
+### Via a Node.js app
+
 Using a connect-compatible framework such as Express.js conditionally enable
 the following middleware
 
@@ -31,7 +33,15 @@ the following middleware
       );
     }
 
-Then using a tool like siege call:
+### Via the public docker image
+
+    docker run \
+      -e "DANGEROUSLY_INEFICCIENT_ENDPOINT=${DANGEROUSLY_INEFICCIENT_ENDPOINT}" \
+      -it --rm \
+      -p 3000:3000 \
+      bermi/inefficient
+
+Then using a tool like siege:
 
     siege -r 100 \
       "http://localhost:3000/${DANGEROUSLY_INEFICCIENT_ENDPOINT}?memory=800"
