@@ -1,6 +1,6 @@
 {
   "name": "inefficient",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Stress generation middleware to load CPU and memory.",
   "main": "index.js",
   "scripts": {
